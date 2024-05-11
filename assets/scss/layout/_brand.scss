@@ -1,0 +1,64 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  09. barnd CSS START
+/*----------------------------------------*/
+
+.tp-brand-title{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.4;
+}
+.tp-brand-title-box{
+    & span{
+        color: var(--tp-theme-1);
+    }
+}
+.brand-space-bottom{
+    @media #{$md} {
+        padding-bottom: 0px;
+    }
+}
+.tp-brand-item-two{
+    height: 278px;
+    width: 278px;
+    border: 2px dashed var(--tp-border-5);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 278px;
+    margin: 0 -10px 0px -10px;
+    transition: .3s;
+    &:hover{
+        margin-top: -10px;
+        border-color: var(--tp-common-green);
+    }
+    @media #{$xl} {
+        height: 240px;
+        width: 240px;
+        line-height: 240px;
+    }
+    @media #{$lg} {
+        height: 200px;
+        width: 200px;
+        line-height: 200px;
+    }
+    @media #{$md} {
+        height: 250px;
+        width: 250px;
+        line-height: 250px;
+    }
+    @media #{$xs} {
+        margin: 0px 0px 0px 0px;
+        margin:  0 auto;
+    }
+}
+.brand-center{
+    & .brand-logo{
+        text-align: center;
+    }
+}
+.brand-logo {
+    @media #{$xs} {
+        text-align: center;
+    }
+}

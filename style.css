@@ -1,0 +1,14 @@
+.whatsapp-box {
+    position: fixed;
+    bottom: 90px;  
+    right: 20px;  
+    background-color: #dbd8f6;  
+    border: 2px solid #ccc;  
+    border-radius: 10px; 
+    padding: 10px;  
+  }
+  
+  .whatsapp-icon img {
+    width: 40px;  
+    height: auto;
+  }

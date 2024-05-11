@@ -1,0 +1,102 @@
+@use '../utils' as *;
+
+.tp-section-subtitle{
+    font-family: 'Arimo';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--tp-common-black-2);
+    background-color: var(--tp-common-white);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 65px;
+    border: 1px solid var(--tp-border-1);
+    box-shadow: 0px 9px 15px rgba(7, 18, 35, 0.08);
+    margin-bottom: 30px;
+    @media #{$xs} {
+        padding: 10px 13px;
+    }
+    &::after{
+        content: '';
+        height: 12px;
+        width: 12px;
+        background-color: var(--tp-theme-1);
+        display: inline-block;
+        border-radius: 50%;
+        margin-left: 10px;
+    }
+    &::before{
+        content: '';
+        height: 12px;
+        width: 12px;
+        background-color: var(--tp-theme-1);
+        display: inline-block;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    &.tp-green-color{
+        &::after{
+            background-color: var(--tp-common-green);
+        }
+        &::before{
+            background-color: var(--tp-common-green);
+        }
+    }
+    &.tp-yellow-color{
+        &::after{
+            background-color: var(--tp-common-yellow);
+        }
+        &::before{
+            background-color: var(--tp-common-yellow);
+        }
+    }
+}
+.tp-section-title{
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    @media #{$xl} {
+        font-size: 50px;
+    }
+    @media #{$lg,$md} {
+        font-size: 45px;
+    }
+    @media #{$xs} {
+        font-size: 30px;
+    }
+}
+.tp-section-title-sm{
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    @media #{$xl} {
+        font-size: 50px;
+    }
+    @media #{$lg,$md} {
+        font-size: 45px;
+    }
+    @media #{$xs} {
+        font-size: 35px;
+    }
+}
+.tp-section-title-xs{
+    font-weight: 600;
+    font-size: 45px;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    margin-bottom: 0;
+    @media #{$md} {
+        br{
+            display: none;
+        }
+    }
+    @media #{$xs} {
+        font-size: 32px;
+        br{
+            display: none;
+        }
+    }
+}
+

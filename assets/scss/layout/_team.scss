@@ -1,0 +1,171 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  14. team CSS START
+/*----------------------------------------*/
+
+.tp-team{
+    &-thumb{
+        height: 285px;
+        width: 285px;
+        position: relative;
+        display: inline-block;
+        border-radius: 50%;
+        margin-bottom: 50px;
+        transition: .7s;
+        @media #{$xl} {
+            height: 240px;
+            width: 240px;
+        }
+        @media #{$lg} {
+            height: 200px;
+            width: 200px;
+        }
+        @media #{$xs} {
+            height: 260px;
+            width: 260px;
+        }
+        &-icon{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            opacity: 0;
+            visibility: hidden;
+            transition: .4s;
+            z-index: 9;
+            & a{
+                height: 55px;
+                width: 55px;
+                background-color: var(--tp-common-white);
+                border-radius: 50%;
+                text-align: center;
+                line-height: 65px;
+                display: inline-block;
+                & i{
+                    transform: rotate(-38deg);
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: var(--tp-common-black);
+                }
+            }
+        }
+        &:hover{
+            &::before{
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1);
+            }
+            &::after{
+                border-color: var(--tp-common-green);
+            }
+            & .tp-team-thumb-icon{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            background-color: rgba($color: #33CC79, $alpha: 0.7);
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(.7);
+            transition: .4s;
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px dashed var(--tp-border-7);
+            border-radius: 50%;
+            transform: scale(1.1);
+            transition: .4s;
+        }
+        & img{
+            border-radius: 50%;
+            width: 100%;
+            transition: .7s;
+        }
+    }
+    &:hover{
+        &-thumb{
+            & img{
+                transform: scale(1.1);
+            }
+        } 
+    }
+}
+.tp-team-content{
+    & span{
+        font-weight: 400;
+        font-size: 14px;
+        text-transform: capitalize;       
+        color:var(--tp-grey-4);
+        padding-bottom: 10px;
+        display: inline-block;
+    }
+}
+.tp-team-social{
+    & a{
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--tp-common-white);
+        padding: 0px 20px;
+        border-right: 1px solid var(--tp-border-5);
+        &:hover{
+            color: var(--tp-theme-1);
+        }
+        @media #{$lg} {
+            padding: 0px 15px;
+        }
+        &:last-child{
+            border-right: 0;
+        }
+    }
+}
+.tp-team-title {
+    font-size: 20px;
+    font-weight: 600;
+    transition: .3s;
+    &:hover{
+        & a{
+            color: var(--tp-common-green);
+            display: inline-block;
+        }
+    }
+    @media #{$lg} {
+        font-size: 18px;
+    }
+}
+.team-inner{
+    & .tp-team-content{
+        & .tp-team-title{
+            color: var(--tp-common-black);
+        }
+        & span{
+            color: #6A6A74;
+        }
+    }
+    & .tp-team-social{
+        & a{
+            color: var(--tp-common-black);
+            border-right: 1px solid var(--tp-border-7);
+            &:hover{
+                color: var(--tp-common-green);
+            }
+        }
+    }  
+}

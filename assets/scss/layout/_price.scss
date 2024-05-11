@@ -1,0 +1,135 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  17. price CSS START
+/*----------------------------------------*/
+
+.tp-price{
+    padding: 70px 60px;
+    border-radius: 20px 0px 0px 20px;
+    box-shadow:0px 2px 12px rgba(20, 20, 43, 0.08);
+    height: 100%;
+    @media #{$lg} {
+        padding: 60px 30px;  
+    }
+    @media #{$md} {
+        padding: 60px 40px;
+    }
+    @media #{$sm} {
+        padding: 60px 40px;
+        border-radius: 20px 20px 0px 0px;  
+    }
+    @media #{$xs} {
+        padding: 20px 15px;
+        border-radius: 20px 20px 0px 0px;  
+    }
+    &.price-grey-bg{
+        background: #F7F7F7;
+        border-radius: 0 20px 20px 0;
+        border: 0;
+        @media #{$sm} {
+            padding: 60px 40px;
+            border-radius: 0px 0px 20px 20px;  
+        }
+        @media #{$xs} {
+            padding: 20px 15px;
+            border-radius: 0px 0px 20px 20px;  
+        }
+    }
+    &__content{
+        margin-bottom: 40px;
+        &-circle{
+            height: 70px;
+            width: 70px;
+            background-color: #EDECFE;
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            & span{
+                height: 40px;
+                width: 40px;
+                background-color: var(--tp-common-white);
+                display: inline-block;
+                border-radius: 50%;
+                overflow: hidden;
+                transform: rotate(180deg);
+                &::before{
+                    content: "";
+                    height: 100%;
+                    width :50%;
+                    background-color: var(--tp-common-deep-blue);
+                    display: inline-block;
+                }
+            }
+        }
+        &-text{
+            & span{
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 20px;
+                color: #6A6A74;
+            }
+            & h5{
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 35px;
+                margin-bottom: 0;
+            }
+        }
+    }
+    & p{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    &__price{
+        margin-bottom: 30px;
+        display: inline-block;
+        & span{
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 22px;
+            color: #6A6A74;
+        }
+        & b{
+            font-weight: 600;
+            font-size: 54px;
+            line-height: 66px;
+            color: var(--tp-common-black);
+        }
+    }
+    &__title{
+        margin-bottom: 30px;
+    }
+    &__list{
+        & ul{
+            & li{
+                margin-bottom: 15px;
+                position: relative;
+                padding-left: 40px;
+                @media #{$lg} {
+                    margin-bottom: 10px; 
+                }
+                &.price-disable{
+                    color: #BAB9CA;
+                    & i{
+                        background-color: #BAB9CA;
+                    }
+                }
+                & i{
+                    height: 25px;
+                    width: 25px;
+                    background-color: var(--tp-common-deep-blue);
+                    color: var(--tp-common-white);
+                    text-align: center;
+                    line-height: 25px;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 0;
+                }
+            }
+        }
+    }
+}

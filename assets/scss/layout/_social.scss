@@ -1,0 +1,114 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  11. social CSS START
+/*----------------------------------------*/
+
+.tp-social-item{
+    padding: 50px 20px;
+    text-align: center;
+    border: 1px solid var(--tp-border-1);
+    margin: 0px -1px 0px -1px;
+    border-bottom: 3px solid #4064AC;
+    transition: .3s;
+    @media #{$lg} {
+        padding: 40px 15px;   
+    }
+    &:hover{
+        background-color: #4064AC;
+        & span{
+            color: var(--tp-common-white);
+            & i{
+                color: var(--tp-common-white);
+            }
+        }
+    }
+    & span{
+        font-weight: 400;
+        font-size: 22px;
+        text-transform: uppercase;
+        color: var(--tp-common-black);
+        transition: .3s;
+        @media #{$lg} {
+            font-size: 19px;   
+        }
+        & i{
+            color: #4064AC;
+            margin-right: 10px;
+            transition: .3s;
+            @media #{$lg} {
+                margin-right: 6px;   
+            }
+        }
+    }
+    &.tp-youtube{
+        border-bottom: 3px solid #FF0000;
+        &:hover{
+            background-color: #FF0000;
+            & i{
+                color: var(--tp-common-white);
+            }
+        }
+      & span{
+            & i{
+                color: #FF0000;
+            }
+        } 
+    }
+    &.tp-behance{
+        border-bottom: 3px solid #1DA1F2;
+        &:hover{
+            background-color: #1DA1F2;
+            & i{
+                color: var(--tp-common-white);
+            }
+        }
+      & span{
+            & i{
+                color: #1DA1F2;
+            }
+        } 
+    }
+    &.tp-dribble{
+        border-bottom: 3px solid #FF56BB;
+        &:hover{
+            background-color: #FF56BB;
+            & i{
+                color: var(--tp-common-white);
+            }
+        }
+      & span{
+            & i{
+                color: #FF56BB;
+            }
+        } 
+    }
+    &.tp-twitter{
+        border-bottom: 3px solid #1DA1F2;
+        &:hover{
+            background-color: #1DA1F2;
+            & i{
+                color: var(--tp-common-white);
+            }
+        }
+      & span{
+            & i{
+                color: #1DA1F2;
+            }
+        } 
+    }
+    &.tp-linkedin{
+        border-bottom: 3px solid #4064AC;
+        &:hover{
+            background-color: #4064AC;
+            & i{
+                color: var(--tp-common-white);
+            }
+        }
+      & span{
+            & i{
+                color: #4064AC;
+            }
+        } 
+    }
+}

@@ -1,0 +1,200 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  20. footer CSS START
+/*----------------------------------------*/
+
+.footer-bg{
+    position: relative;
+    background-size: cover;
+    padding-bottom: 30px;
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.80);
+    }
+}
+.tp-footer-title{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--tp-common-white); 
+    padding-bottom: 20px;   
+}
+.tp-footer-widget{
+    &__social{
+        position: relative;
+        & a{
+            position: relative;
+            display: inline-block;
+            &::after{
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($color: #000000, $alpha: .7);
+            }
+        }
+    }
+    &__list{
+        & ul{
+            &.footer-position{
+                & li{
+                    padding-left: 40px;
+                    position: relative;
+                    margin-bottom: 15px;
+                    & a{
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 16px;
+                        color: var(--tp-common-white);
+                        & span{
+                            position: absolute;
+                            top: 6px;
+                            left: 0;
+                            font-size: 20px;   
+                        }
+                    }
+                } 
+            }
+            & li{
+                padding-bottom: 5px;
+                & a{
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: var(--tp-common-white);
+                    transition: .3s;
+                    &:hover{
+                        color: var(--tp-common-green);
+                    }
+                }
+            }
+        }
+    }
+}
+.footer-space-one{
+    padding-left: 50px;
+    @media #{$lg} {
+        padding-left: 0px;  
+    }
+    @media #{$md,$xs} {
+        padding-left: 0px;  
+    }
+}
+.footer-border-top{
+    border-top: 1px solid var(--tp-border-5);
+}
+.copyright-left{
+    & p{
+        color: var(--tp-common-white);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+    }
+}
+.copyright-right-side{
+    & ul{
+        @media #{$md} {
+            margin-bottom: 30px; 
+        }
+        & li{
+            display: inline-block;
+            padding-left: 50px;           
+            @media #{$lg} {
+                padding-left: 15px;  
+            }
+            @media #{$md} {
+                padding-left: 0px;
+                padding: 0px 15px;  
+            }
+            @media #{$xs} {
+                padding-left: 0px;
+                padding: 0px 10px;  
+            }
+            &:first-child{
+                padding-left: 0;
+            }
+            & a{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 18px;
+                color: var(--tp-common-white);
+                &:hover{
+                    color: var(--tp-common-orange);
+                }
+            }
+        }
+    }
+}
+.footer-scroll{
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 3;
+    & button{
+        height: 40px;
+        width: 40px;
+        background-color: white;
+        border: 2px dashed var(--tp-common-white);
+        border-radius: 50%;
+    }
+}
+.footer-icons{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 35px;
+    color: var(--tp-common-white);
+    transition: .4s;
+    z-index: 99;
+    @media #{$xs} {
+        font-size: 20px;
+    }
+}
+
+
+.scroll-top {
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	position: fixed;
+	bottom: -10%;
+	right: 50px;
+	font-size: 16px;
+	border-radius: 6px;
+	z-index: 99;
+	color: var(--tp-common-white);
+	text-align: center;
+	cursor: pointer;
+	background: var(--tp-common-green);
+	transition: 1s ease;
+	border: none;
+    @media #{$xs} {
+       right: 30px;
+    }
+}
+.scroll-top.open {
+	bottom: 30px;
+}
+.scroll-top::after {
+	position: absolute;
+	z-index: -1;
+	content: "";
+	top: 100%;
+	left: 5%;
+	height: 10px;
+	width: 90%;
+	opacity: 1;
+	background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 80%);
+}

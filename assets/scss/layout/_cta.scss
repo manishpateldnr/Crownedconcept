@@ -1,0 +1,201 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  12. cta CSS START
+/*----------------------------------------*/
+
+.tp-cta-item{
+    margin: 0px -20px 0px -20px;
+    border: 2px dashed var(--tp-common-green);
+    border-radius: 50%;
+    width: 580px;
+    height: 580px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    @media #{$lg} {
+        width: 500px;
+        height: 500px;
+    }
+    @media #{$md} {
+        width: 370px;
+        height: 370px;
+        margin: 0px -20px 0px -20px;
+        margin: 0 auto;
+    }
+    @media #{$xs} {
+        width: 300px;
+        height: 300px;
+        margin: 0px 0px 0px 0px;
+        margin: 0 auto;
+    }
+    @media #{$sm} {
+        width: 280px;
+        height: 280px;
+        margin: 0px 0px 0px 0px;
+        margin: 0 auto;
+    }
+    &.orange-border{
+        border-color: var(--tp-common-orange);
+    }
+}
+.tp-cta-title{
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: -0.01em;
+    color: var(--tp-common-white);
+    margin-bottom: 50px;
+    @media #{$md} {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    @media #{$xs} {
+        font-size: 27px;
+        margin-bottom: 20px;
+    }
+}
+.cta-big-text{
+    font-weight: 600;
+    font-size: 122px;
+    letter-spacing: -0.02em;
+    margin-bottom: 0;
+    -webkit-text-stroke: 1px #000;
+    color: transparent;
+    transition: .4s;
+    @media #{$lg} {
+        font-size: 95px;
+    }
+    @media #{$md} {
+        font-size: 75px;
+    }
+    @media #{$xs} {
+        font-size: 90px;
+        margin-bottom: 60px;
+    }
+    @media #{$sm} {
+        font-size: 55px;
+    }
+}
+.cta-effect-img{
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+    z-index: -1;
+}
+.cta-space{
+    padding-bottom: 140px;
+    @media #{$md} {
+        padding-bottom:90px;
+    }
+    @media #{$xs} {
+       padding-bottom:40px;
+    }
+}
+.cta-item{
+    &:hover{
+        & .cta-big-text{
+            -webkit-text-stroke: 1px transparent;
+            color: var(--tp-common-black); 
+        }
+        & .cta-effect-img{
+            bottom: 50px;
+            visibility: visible;
+            opacity: 1;
+        }  
+    }
+}
+
+.marque-item{
+    padding-top: 40px;
+    & span{
+        font-weight: 600;
+        font-size: 122px;
+        letter-spacing: -0.02em;
+        -webkit-text-stroke: 1px #000;
+        color: transparent;
+        @media #{$lg} {
+            font-size: 80px;
+        }
+        @media #{$md} {
+            font-size: 75px;
+        }
+        @media #{$xs} {
+            font-size: 70px;
+        }
+    }
+}
+.tp-marque-wrapper{
+    margin-left: -200px;
+    margin-right: -200px;
+}
+.marque-slider-active{
+    & .marque-item{
+        padding-bottom: 80px;
+        @media #{$md,$xs} {
+            padding-bottom: 50px;
+        }
+    }
+    & .slick-slide{
+        padding: 0px 55px;
+        @media #{$lg,$md} {
+            padding: 0px 20px;
+        }
+        @media #{$xs} {
+            padding: 0px 10px;
+        }
+    }
+}
+.marque-slider-active-2{
+    & .marque-item{
+        padding-bottom: 120px;
+        @media #{$md,$xs} {
+            padding-bottom: 90px;
+        }
+    }
+    & .slick-slide{
+        padding: 0px 55px;
+        @media #{$lg,$md} {
+            padding: 0px 20px;
+        }
+        @media #{$xs} {
+            padding: 0px 10px;
+        }
+    }
+    .marque-item{
+        padding-top: 40px;
+        & span{
+            font-weight: 600;
+            font-size: 122px;
+            letter-spacing: -0.02em;
+            color: #000;
+            @media #{$lg} {
+                font-size: 80px;
+            }
+            @media #{$md} {
+                font-size: 75px;
+            }
+            @media #{$xs} {
+                font-size: 70px;
+            }
+        }
+    }
+}
+.cta-space-three{
+    @media #{$md} {
+        padding-top: 0;
+    }
+    @media #{$xs} {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+.cta-img {
+    @media #{$md,$xs} {
+        margin-top: 30px;
+    }
+}
