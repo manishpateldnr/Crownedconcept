@@ -24,6 +24,7 @@
    <link rel="stylesheet" href="assets/css/magnific-popup.css">
    <link rel="stylesheet" href="assets/css/spacing.css">
    <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -453,10 +454,16 @@
                         <div class="col-lg-6 col-md-12 col-12">
                            <div class="tp-newsletter">
                               <div class="tp-newsletter__input p-relative">
-                                 <form action="#">
-                                    <input type="email" placeholder="Enter your mail">
-                                    <button class="tp-btn-yellow">Subscribe <i class="far fa-arrow-right"></i></button>
+                                 <form id="subscribeForm" action="subscribe_form.php" method="POST">
+                                    <input type="email" placeholder="Enter your email" name="email">
+                                    <button class="tp-btn-yellow" style="width: 150px; height: 60px;">Subscribe <i
+                                          class="far fa-arrow-right"></i></button>
+
                                  </form>
+
+                                 <div id="successMessage" style="display: none; color: aliceblue;">
+                                    Thank you for subscribing!
+                                 </div>
                               </div>
                            </div>
                         </div>
@@ -485,9 +492,41 @@
          </div>
       </div>
       <!-- tp-footer-area-end -->
+      <div class="whatsapp-box">
+         <a href="https://wa.me/918595553609" target="_blank">
+           <div class="whatsapp-icon">
+             <img src="download.png" alt="WhatsApp">
+           </div>
+         </a>
+       </div>
+
    </footer>
 
    <!-- JS here -->
+   <script>
+      // JavaScript to handle form submission
+      document.getElementById("subscribeForm").addEventListener("submit", function (event) {
+         event.preventDefault(); // Prevent default form submission
+         var formData = new FormData(this); // Get form data
+         // Send form data to subscribe_form.php using fetch API
+         fetch("subscribe_form.php", {
+            method: "POST",
+            body: formData
+         })
+            .then(response => {
+               if (response.ok) {
+                  // If form submission is successful, show success message
+                  document.getElementById("successMessage").style.display = "block";
+                  // Optional: Reset form fields after successful submission
+                  document.getElementById("subscribeForm").reset();
+               } else {
+                  console.error("Form submission failed.");
+               }
+            })
+            .catch(error => console.error("Error:", error));
+      });
+   </script>
+
    <script src="assets/js/jquery.js"></script>
    <script src="assets/js/waypoints.js"></script>
    <script src="assets/js/bootstrap.bundle.min.js"></script>
