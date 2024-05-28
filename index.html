@@ -31,7 +31,7 @@
    <link rel="stylesheet" href="assets/css/magnific-popup.css">
    <link rel="stylesheet" href="assets/css/spacing.css">
    <link rel="stylesheet" href="assets/css/style.css">
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -82,7 +82,7 @@
                            <li><a href="team.html">Our Team</a></li>
                            
                            <li><a href="service.html">Services</a>
-                              <li><a href="login.php">Admin</a></li>
+                              <!-- <li><a href="login.php">Admin</a></li> -->
                            </li>
                            <li><a href="#">Pages</a>
                               <ul class="submenu">
@@ -365,57 +365,62 @@
                   </div>
                </div>
             </div>
+            <div class="scrollbtnbox" style="display: flex;justify-content: space-between;">
+               <button class="scroll-btn-left" onclick="scrollLeft()">&#9664;</button>
+               <button class="scroll-btn-right" onclick="scrollRight()">&#9654;</button>
+            </div>
             <div class="tp-case-wrapper">
-               <div class="tp-case-active">
-                  <div class="tp-case-item text-center p-relative">
-                     <div class="tp-case-item__thumb fix">
-                        <a href="case-details.html"><img src="assets/img/case/case-cover/1.png" alt="aadifoundation"></a>
+               <div class="scroll-container">
+                  <div class="tp-case-active">
+                     <div class="tp-case-item text-center p-relative">
+                        <div class="tp-case-item__thumb fix">
+                           <a href="case-details.html"><img src="assets/img/case/case-cover/1.png" alt="aadifoundation"></a>
+                        </div>
+                        <div class="tp-circle-text">
+                           <a href="case-details7.html">Case <br> Studies</a>
+                        </div>
                      </div>
-                     <div class="tp-circle-text">
-                        <a href="case-details7.html">Case <br> Studies</a>
+                     <div class="tp-case-item text-center p-relative">
+                        <div class="tp-case-item__thumb fix">
+                           <a href="case-details.html"><img src="assets/img/case/case-cover/7.png" alt="Osmoze"></a>
+                        </div>
+                        <div class="tp-circle-text">
+                           <a href="case-details1.html">Case <br> Studies</a>
+                        </div>
                      </div>
-                  </div>
-                  <div class="tp-case-item text-center p-relative">
-                     <div class="tp-case-item__thumb fix">
-                        <a href="case-details.html"><img src="assets/img/case/case-cover/7.png" alt="Osmoze"></a>
+                     <div class="tp-case-item text-center p-relative">
+                        <div class="tp-case-item__thumb fix">
+                           <a href="case-details.html"><img src="assets/img/case/case-cover/4.png" alt=""></a>
+                        </div>
+                        <div class="tp-circle-text">
+                           <a href="case-details3.html">Case <br> Studies</a>
+                        </div>
                      </div>
-                     <div class="tp-circle-text">
-                        <a href="case-details1.html">Case <br> Studies</a>
+                     <div class="tp-case-item text-center p-relative">
+                        <div class="tp-case-item__thumb fix">
+                           <a href="case-details.html"><img src="assets/img/case/case-cover/2.png" alt="UGreenTech"></a>
+                        </div>
+                        <div class="tp-circle-text">
+                           <a href="case-details5.html">Case <br> Studies</a>
+                        </div>
                      </div>
-                  </div>
-                  <div class="tp-case-item text-center p-relative">
-                     <div class="tp-case-item__thumb fix">
-                        <a href="case-details.html"><img src="assets/img/case/case-cover/4.png" alt=""></a>
-                     </div>
-                     <div class="tp-circle-text">
-                        <a href="case-details3.html">Case <br> Studies</a>
-                     </div>
-                  </div>
-                  <div class="tp-case-item text-center p-relative">
-                     <div class="tp-case-item__thumb fix">
-                        <a href="case-details.html"><img src="assets/img/case/case-cover/2.png" alt="UGreenTech"></a>
-                     </div>
-                     <div class="tp-circle-text">
-                        <a href="case-details5.html">Case <br> Studies</a>
-                     </div>
-                  </div>
-                  <div class="tp-case-item text-center p-relative">
-                     <div class="tp-case-item__thumb fix">
-                        <a href="case-details.html"><img src="assets/img/case/case-cover/3.png" alt=""></a>
-                     </div>
-                     <div class="tp-circle-text">
-                        <a href="case-details6.html">Case <br> Studies</a>
+                     <div class="tp-case-item text-center p-relative">
+                        <div class="tp-case-item__thumb fix">
+                           <a href="case-details.html"><img src="assets/img/case/case-cover/3.png" alt=""></a>
+                        </div>
+                        <div class="tp-circle-text">
+                           <a href="case-details6.html">Case <br> Studies</a>
+                        </div>
                      </div>
                   </div>
                </div>
-            </div>
-            <div class="row">
-               <div class="case-button mt-30 text-center">
-                  <a class="tp-btn" href="case-studies.html">more Case Studies</a>
+               <div class="row">
+                  <div class="case-button mt-30 text-center">
+                     <a class="tp-btn" href="case-studies.html">more Case Studies</a>
+                  </div>
                </div>
             </div>
-         </div>
-      </div>
+            
       <!-- tp-case-area-end -->
 
       <!-- tp-marque-area-start -->
@@ -867,6 +872,18 @@
    </footer>
 
    <!-- JS here -->
+   <script>
+      function scrollLeft() {
+         const container = document.querySelector('.tp-case-active');
+         container.scrollBy({ left: -300, behavior: 'smooth' });
+      }
+
+      function scrollRight() {
+         const container = document.querySelector('.tp-case-active');
+         container.scrollBy({ left: 300, behavior: 'smooth' });
+      }
+   </script>
+   
    <script>
       // JavaScript to handle form submission
       document.getElementById("subscribeForm").addEventListener("submit", function (event) {

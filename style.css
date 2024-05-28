@@ -12,3 +12,54 @@
     width: 40px;  
     height: auto;
   }
+
+  .scroll-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+ }
+
+ .tp-case-active {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
+ }
+
+ .tp-case-item {
+    min-width: 200px; /* Adjust based on your design */
+    margin: 0 10px;
+ }
+ 
+
+ .scroll-btn {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+ }
+
+ .scroll-btn-left {
+    left: 0;
+ }
+
+ .scroll-btn-right {
+    right: 0;
+ }
+
+ .case-button {
+    margin-top: 30px;
+ }
+
+ .tp-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+ }

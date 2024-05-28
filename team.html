@@ -788,6 +788,19 @@
 
    <!-- JS here -->
    <script>
+      function scrollLeft() {
+         const container = document.querySelector('.tp-case-active');
+         container.scrollBy({ left: -300, behavior: 'smooth' });
+      }
+   
+      function scrollRight() {
+         const container = document.querySelector('.tp-case-active');
+         container.scrollBy({ left: 300, behavior: 'smooth' });
+      }
+   </script>
+   
+
+   <script>
       // JavaScript to handle form submission
       document.getElementById("subscribeForm").addEventListener("submit", function (event) {
          event.preventDefault(); // Prevent default form submission
