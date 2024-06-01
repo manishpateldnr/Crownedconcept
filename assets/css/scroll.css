@@ -1,0 +1,40 @@
+
+.tp-case-area {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    position: relative;
+}
+
+.scrollbtnbox {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.scroll-btn-left, .scroll-btn-right {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.tp-case-active {
+    display: flex;
+}
+
+.tp-case-item {
+    min-width: 200px; /* Adjust as needed */
+    margin-right: 10px; /* Adjust spacing as needed */
+}
+
+.tp-case-item__thumb img {
+    max-width: 100%;
+    display: block;
+}

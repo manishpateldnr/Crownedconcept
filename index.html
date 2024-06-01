@@ -19,6 +19,7 @@
    <link rel="shortcut icon" type="image/x-icon" href="crowned concept logooo.svg">
 
    <!-- CSS here -->
+   <link rel="stylesheet" href="assets/css/scroll.css" class="scroll">
    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
    <link rel="stylesheet" href="assets/css/animate.css">
    <link rel="stylesheet" href="assets/css/custom-animation.css">
@@ -357,70 +358,71 @@
       <!-- tp-case-area-start -->
       <div class="tp-case-area case-grident-bg pt-120 pb-120 fix">
          <div class="container-fluid">
-            <div class="row g-0 justify-content-center">
-               <div class="col-xl-6">
-                  <div class="tp-case-title-box mb-60 text-center">
-                     <h3 class="tp-section-subtitle">Our Project</h3>
-                     <h3 class="tp-section-title-sm">Look at Our Recent <br> Projects</h3>
-                  </div>
+             <div class="row g-0 justify-content-center">
+                 <div class="col-xl-6">
+                     <div class="tp-case-title-box mb-60 text-center">
+                         <h3 class="tp-section-subtitle">Our Project</h3>
+                         <h3 class="tp-section-title-sm">Look at Our Recent <br> Projects</h3>
+                     </div>
+                 </div>
+             </div>
+             <div class="scrollbtnbox" style="display: flex; justify-content: space-between; align-items: center;">
+                 <button class="scroll-btn-left" onclick="scrollLeft()">&#9664;</button>
+                 <button class="scroll-btn-right" onclick="scrollRight()">&#9654;</button>
+             </div>
+             <div class="tp-case-wrapper">
+                 <div class="scroll-container" id="scrollContainer">
+                     <div class="tp-case-active">
+                         <div class="tp-case-item text-center p-relative">
+                             <div class="tp-case-item__thumb fix">
+                                 <a href="case-details.html"><img src="assets/img/case/case-cover/1.png" alt="aadifoundation"></a>
+                             </div>
+                             <div class="tp-circle-text">
+                                 <a href="case-details7.html">Case <br> Studies</a>
+                             </div>
+                         </div>
+                         <div class="tp-case-item text-center p-relative">
+                             <div class="tp-case-item__thumb fix">
+                                 <a href="case-details.html"><img src="assets/img/case/case-cover/7.png" alt="Osmoze"></a>
+                             </div>
+                             <div class="tp-circle-text">
+                                 <a href="case-details1.html">Case <br> Studies</a>
+                             </div>
+                         </div>
+                         <div class="tp-case-item text-center p-relative">
+                             <div class="tp-case-item__thumb fix">
+                                 <a href="case-details.html"><img src="assets/img/case/case-cover/4.png" alt=""></a>
+                             </div>
+                             <div class="tp-circle-text">
+                                 <a href="case-details3.html">Case <br> Studies</a>
+                             </div>
+                         </div>
+                         <div class="tp-case-item text-center p-relative">
+                             <div class="tp-case-item__thumb fix">
+                                 <a href="case-details.html"><img src="assets/img/case/case-cover/2.png" alt="UGreenTech"></a>
+                             </div>
+                             <div class="tp-circle-text">
+                                 <a href="case-details5.html">Case <br> Studies</a>
+                             </div>
+                           </div>
+                           <div class="tp-case-item text-center p-relative">
+                               <div class="tp-case-item__thumb fix">
+                                   <a href="case-details.html"><img src="assets/img/case/case-cover/3.png" alt=""></a>
+                               </div>
+                               <div class="tp-circle-text">
+                                   <a href="case-details6.html">Case <br> Studies</a>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="row">
+                       <div class="case-button mt-30 text-center">
+                           <a class="tp-btn" href="case-studies.html">more Case Studies</a>
+                       </div>
+                   </div>
                </div>
-            </div>
-            <div class="scrollbtnbox" style="display: flex;justify-content: space-between;">
-               <button class="scroll-btn-left" onclick="scrollLeft()">&#9664;</button>
-               <button class="scroll-btn-right" onclick="scrollRight()">&#9654;</button>
-            </div>
-            <div class="tp-case-wrapper">
-               <div class="scroll-container">
-                  <div class="tp-case-active">
-                     <div class="tp-case-item text-center p-relative">
-                        <div class="tp-case-item__thumb fix">
-                           <a href="case-details.html"><img src="assets/img/case/case-cover/1.png" alt="aadifoundation"></a>
-                        </div>
-                        <div class="tp-circle-text">
-                           <a href="case-details7.html">Case <br> Studies</a>
-                        </div>
-                     </div>
-                     <div class="tp-case-item text-center p-relative">
-                        <div class="tp-case-item__thumb fix">
-                           <a href="case-details.html"><img src="assets/img/case/case-cover/7.png" alt="Osmoze"></a>
-                        </div>
-                        <div class="tp-circle-text">
-                           <a href="case-details1.html">Case <br> Studies</a>
-                        </div>
-                     </div>
-                     <div class="tp-case-item text-center p-relative">
-                        <div class="tp-case-item__thumb fix">
-                           <a href="case-details.html"><img src="assets/img/case/case-cover/4.png" alt=""></a>
-                        </div>
-                        <div class="tp-circle-text">
-                           <a href="case-details3.html">Case <br> Studies</a>
-                        </div>
-                     </div>
-                     <div class="tp-case-item text-center p-relative">
-                        <div class="tp-case-item__thumb fix">
-                           <a href="case-details.html"><img src="assets/img/case/case-cover/2.png" alt="UGreenTech"></a>
-                        </div>
-                        <div class="tp-circle-text">
-                           <a href="case-details5.html">Case <br> Studies</a>
-                        </div>
-                     </div>
-                     <div class="tp-case-item text-center p-relative">
-                        <div class="tp-case-item__thumb fix">
-                           <a href="case-details.html"><img src="assets/img/case/case-cover/3.png" alt=""></a>
-                        </div>
-                        <div class="tp-circle-text">
-                           <a href="case-details6.html">Case <br> Studies</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="case-button mt-30 text-center">
-                     <a class="tp-btn" href="case-studies.html">more Case Studies</a>
-                  </div>
-               </div>
-            </div>
-            
+           </div>
+       </div>
       <!-- tp-case-area-end -->
 
       <!-- tp-marque-area-start -->
@@ -478,58 +480,85 @@
             <div class="row justify-content-center">
                <div class="col-xl-5 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                   <div class="tp-brand-section-title-box text-center mb-60">
-                     <h4 class="tp-section-title-xs text-white">Work With Global Top Brands.</h4>
+                     <h4 class="tp-section-title-xs text-white">Work With Our Brands.</h4>
                   </div>
                </div>
             </div>
-            <div class="row align-items-center">
+            <div class="row align-items-center space-between">
                <div class="col-lg col-md wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
                   <div class="brand-logo">
-                     <img src="assets/img/brand/brand-7.png" alt="">
+                     <div class="img1-size">
+                        <img src="assets/img/brand/anjali.png" alt="AnajaliJewels">
+                     </div>
                   </div>
                </div>
                <div class="col-lg col-md wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".6s">
                   <div class="brand-logo">
-                     <img src="assets/img/brand/brand-8.png" alt="">
+                     <div class="img2-size">
+                        
+                        <img src="assets/img/brand/agriJoy.png" alt="AgriJoy">
+                     </div>
                   </div>
                </div>
                <div class="col-lg col-md wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
                   <div class="brand-logo">
-                     <img src="assets/img/brand/brand-9.png" alt="">
+                     <div class="img3-size">
+
+                        <img src="assets/img/brand/boba.png" alt="Osmoze">
+                     </div>
                   </div>
                </div>
                <div class="col-lg col-md wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".8s">
                   <div class="brand-logo">
-                     <img src="assets/img/brand/brand-10.png" alt="">
+                     <div class="img2-size">
+                        <img src="assets/img/brand/bellofox.png" alt="bellofox">
+                     </div>
+                     
                   </div>
                </div>
                <div class="col-lg col-md wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
                   <div class="brand-logo">
-                     <img src="assets/img/brand/brand-11.png" alt="">
+                     <div class="img1-size">
+                     <img src="assets/img/brand/ADF.png" alt="AadiFoundation">
+
+                     </div>
                   </div>
                </div>
             </div>
-            <div class="row brand-center align-items-center">
-               <div class="col-lg-3 col-md-3 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
+            <div class="row brand-center align-items-center ">
+               <div class="col-lg-3 col-md-3 wow tpfadeUp " data-wow-duration=".9s" data-wow-delay=".9s">
                   <div class="brand-logo">
-                     <img src="assets/img/brand/brand-11.png" alt="">
+                     <div class="img3-size">
+                        <img src="assets/img/brand/UGT.png" alt="UGreenTech">
+                     </div>
+                     
                   </div>
                </div>
                <div class="col-lg-3 col-md-3 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay="1s">
                   <div class="brand-logo">
-                     <img src="assets/img/brand/brand-14.png" alt="">
+                     <div class="img2-size">
+
+                        <img src="assets/img/brand/kwabey.png" alt="kwabey">
+                     </div>
                   </div>
                </div>
                <div class="col-lg-3 col-md-3 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay="1s">
                   <div class="brand-logo">
-                     <img src="assets/img/brand/brand-7.png" alt="">
+                     <div class="img2-size">
+
+                        <img src="assets/img/brand/Pack.png" alt="packavie">
+                     </div>
                   </div>
                </div>
                <div class="col-lg-3 col-md-3 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay="1.1s">
                   <div class="brand-logo">
-                     <img src="assets/img/brand/brand-15.png" alt="">
+                     <div class="img3-size">
+
+                        <img src="assets/img/brand/krishaz.png" alt="krishaz">
+                     </div>
                   </div>
                </div>
+              
             </div>
          </div>
       </div>
@@ -952,6 +981,8 @@
             })
             .catch(error => console.error("Error:", error));
       });
+
+
    </script>
    <script src="assets/js/jquery.js"></script>
    <script src="assets/js/waypoints.js"></script>
