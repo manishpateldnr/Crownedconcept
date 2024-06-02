@@ -4774,7 +4774,7 @@ input[type=color] {
 
 .case-custom-space-2 {
   padding-right: 60px;
-  border-right: 1px solid var(--tp-border-7);
+  /* border-right: 1px solid var(--tp-border-7); */
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .case-custom-space-2 {
