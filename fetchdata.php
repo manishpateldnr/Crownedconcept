@@ -1,34 +1,32 @@
 <?php
-// Database connection parameters
-$servername = "localhost"; // Change this to your database server
-$username = "root"; // Change this to your database username
-$password = ""; // Change this to your database password
-$database = "contact"; // Change this to your database name
+ 
+$servername = "localhost";  
+$username = "root";  
+$password = "";  
+$database = "contact"; 
 
-// Create connection
+ 
 $conn = new mysqli($servername, $username, $password, $database);
 
-// Check connection
+ 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Check if logout button is clicked
+ 
 if(isset($_POST['logout'])) {
-    // Redirect to logout page or perform logout action
+    
     header("Location: logout.php");
     exit;
 }
 
-// SQL query to fetch data
-$sql = "SELECT * FROM contact_submissions"; // Change your_table to your actual table name
-
-// Execute query
+ 
+$sql = "SELECT * FROM contact_submissions";  
+ 
 $result = $conn->query($sql);
-
-// Check if any rows were returned
+ 
 if ($result->num_rows > 0) {
-    // Start styling and table
+    
     echo "<style>
             table {
                 width: 80%; /* Adjust as needed */
@@ -70,7 +68,7 @@ if ($result->num_rows > 0) {
             }
           </style>";
 
-    // Output data in a table
+ 
     echo "<table>
             <tr>
                 <th>ID</th>
@@ -78,7 +76,7 @@ if ($result->num_rows > 0) {
                 <th>Email</th>
                 <th>Message</th>
             </tr>";
-    // Output data of each row
+   
     while($row = $result->fetch_assoc()) {
         echo "<tr>
                 <td>".$row["id"]."</td>
@@ -88,7 +86,7 @@ if ($result->num_rows > 0) {
               </tr>";
     }
     echo "</table>";
-    // Print button
+    
     echo "<button onclick='window.print()'>Print</button>";
     
     // Back button

@@ -1,28 +1,26 @@
 <?php
 session_start();
 
-// Check if form is submitted
+ 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve username and password from form
+    
     $username = $_POST['username'];
     $password = $_POST['password'];
-
-    // You should have a database connection here to check the credentials
-    // For demonstration purposes, let's assume the username is "admin" and password is "password"
+ 
     $valid_username = 'Manishpatel';
     $valid_password = 'Mkp@98010';
 
-    // Check if username and password match
+    
     if ($username === $valid_username && $password === $valid_password) {
-        // Authentication successful, set session variables
+        
         $_SESSION['loggedin'] = true;
         $_SESSION['username'] = $username;
         
-        // Redirect to a welcome page
+     
         header("Location: admin.php");
         exit;
     } else {
-        // Authentication failed, redirect back to login page with error message
+       
         $error = "Invalid username or password.";
     }
 }
